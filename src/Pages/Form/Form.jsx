@@ -20,9 +20,9 @@ const Form = () => {
     const readClass = form.readClass.value;
     const gender = form.gender.value;
     const schoolarship = form.schoolarship.value;
-    const student= form.student.value;
+    const student = form.student.value;
 
-    console.log(
+    const candidates = {
       name,
       lastName,
       birthday,
@@ -38,8 +38,22 @@ const Form = () => {
       readClass,
       gender,
       schoolarship,
-      student
-    );
+      student,
+    };
+    console.log("candidates", candidates);
+
+    //post data to the server using fetch API
+    fetch("http://localhost:3000/candidates", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(candidates),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data", data);
+      });
   };
 
   return (
@@ -175,7 +189,10 @@ const Form = () => {
         {/* select 1 */}
 
         <div className="mt-8">
-          <select name="readClass" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full ">
+          <select
+            name="readClass"
+            className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full "
+          >
             <option disabled selected>
               Select Class
             </option>
@@ -188,7 +205,10 @@ const Form = () => {
         </div>
         {/* select  2 */}
         <div className="mt-8">
-          <select name="gender" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5  w-full ">
+          <select
+            name="gender"
+            className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5  w-full "
+          >
             <option disabled selected>
               Select Your Gender
             </option>
@@ -198,7 +218,10 @@ const Form = () => {
         </div>
         {/* select 3 */}
         <div className="mt-8">
-          <select name="student" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full ">
+          <select
+            name="student"
+            className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full "
+          >
             <option disabled selected>
               Are you student?
             </option>
@@ -207,7 +230,10 @@ const Form = () => {
           </select>
         </div>
         <div className="mt-8">
-          <select name="schoolarship" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block p-2.5  w-full ">
+          <select
+            name="schoolarship"
+            className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block p-2.5  w-full "
+          >
             <option disabled selected>
               Interested on Scholarship?
             </option>

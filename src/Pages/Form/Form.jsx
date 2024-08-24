@@ -2,12 +2,13 @@ const Form = () => {
   const handleAdmission = (event) => {
     event.preventDefault();
     console.log("target");
+
     const form = event.target;
 
-    const name = form.fisrtName.value;
+    const name = form.firstName.value;
     const lastName = form.lastName.value;
     const birthday = form.birthday.value;
-    const phoneNumber = form.phone.value;
+    const phone = form.phone.value;
     const address = form.address.value;
     const zip = form.zip.value;
     const city = form.city.value;
@@ -16,6 +17,29 @@ const Form = () => {
     const Last_Name = form.Last_Name.value;
     const parent_phone = form.parent_phone.value;
     const parent_occupation = form.parent_occupation.value;
+    const readClass = form.readClass.value;
+    const gender = form.gender.value;
+    const schoolarship = form.schoolarship.value;
+    const student= form.student.value;
+
+    console.log(
+      name,
+      lastName,
+      birthday,
+      phone,
+      address,
+      zip,
+      city,
+      state,
+      parent_name,
+      Last_Name,
+      parent_phone,
+      parent_occupation,
+      readClass,
+      gender,
+      schoolarship,
+      student
+    );
   };
 
   return (
@@ -28,7 +52,7 @@ const Form = () => {
 
           <input
             type="text"
-            name="fisrtName"
+            name="firstName"
             className=" border-b-2 border-[#BAA994] text-gray-900 text-sm rounded-lg hover:border-[#F18B1C] duration-300  block w-full p-2.5 "
             placeholder="your name"
             required
@@ -56,7 +80,7 @@ const Form = () => {
         <div>
           <input
             type="number"
-            name="Phone"
+            name="phone"
             className=" border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
             placeholder="123-45-678"
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
@@ -72,7 +96,7 @@ const Form = () => {
           </label>
           <input
             type="text"
-            name="adress"
+            name="address"
             className=" border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
             placeholder="street, number, city, state, zip code"
             required
@@ -142,94 +166,54 @@ const Form = () => {
         </div>
       </div>
 
-      <div className="grid  grid-cols-1 md:grid-cols-2 mb-6">
-        {/* checkbox1 */}
+      {/* class info */}
+      <label className="block mb-2 text-xl font-medium mt-16 text-gray-900 dark:text-white">
+        Permanent Address
+      </label>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
+        {/* select 1 */}
 
         <div className="mt-8">
-          <label>Class Applied for:</label>
-          <ul className="w-48 text-sm font-medium text-gray-900  rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-            <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-              <div className="flex items-center ps-3">
-                <input
-                  id="vue-checkbox"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                />
-                <label className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  6th
-                </label>
-              </div>
-            </li>
-            <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-              <div className="flex items-center ps-3">
-                <input
-                  id="react-checkbox"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                />
-                <label className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  7th
-                </label>
-              </div>
-            </li>
-            <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-              <div className="flex items-center ps-3">
-                <input
-                  id="angular-checkbox"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                />
-                <label className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  8th
-                </label>
-              </div>
-            </li>
-            <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-              <div className="flex items-center ps-3">
-                <input
-                  id="laravel-checkbox"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                />
-                <label className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  9th
-                </label>
-              </div>
-            </li>
-          </ul>
+          <select name="readClass" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full ">
+            <option disabled selected>
+              Select Class
+            </option>
+            <option value="10th">10th</option>
+            <option value="6th">6th</option>
+            <option value="8th">7th</option>
+            <option value="9th">8th</option>
+            <option value="5th">9th</option>
+          </select>
         </div>
-        {/* checkbox 2 */}
-        <div className="mt-10">
-          <label>Are you an international student?</label>
-          <div className="flex items-center mt-4 mb-4">
-            <input
-              id="default-radio-1"
-              type="radio"
-              value=""
-              name="default-radio"
-              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-              Yes
-            </label>
-          </div>
-          <div className="flex items-center">
-            <input
-              checked
-              id="default-radio-2"
-              type="radio"
-              value=""
-              name="default-radio"
-              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-              No
-            </label>
-          </div>
+        {/* select  2 */}
+        <div className="mt-8">
+          <select name="gender" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5  w-full ">
+            <option disabled selected>
+              Select Your Gender
+            </option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        {/* select 3 */}
+        <div className="mt-8">
+          <select name="student" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full ">
+            <option disabled selected>
+              Are you student?
+            </option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div className="mt-8">
+          <select name="schoolarship" className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block p-2.5  w-full ">
+            <option disabled selected>
+              Interested on Scholarship?
+            </option>
+            <option value="yes">yes</option>
+            <option value="no">No</option>
+          </select>
         </div>
       </div>
 

@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const Form = () => {
   const handleAdmission = (event) => {
     event.preventDefault();
@@ -53,6 +55,19 @@ const Form = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("data", data);
+        if (data.insertedId) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your form has been submitted successfully!",
+            showConfirmButton: false,
+            timer: 3000,
+          });
+
+          // clear the form after successful submission
+          form.reset();
+         
+        }
       });
   };
 
@@ -112,7 +127,7 @@ const Form = () => {
             type="text"
             name="address"
             className=" border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
-            placeholder="street, number, city, state, zip code"
+            placeholder="Village"
             required
           />
           <input
@@ -136,7 +151,7 @@ const Form = () => {
             type="text"
             name="state"
             className=" border-b-2 mt-6 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
-            placeholder="state"
+            placeholder=" County"
             required
           />
         </div>
@@ -182,7 +197,7 @@ const Form = () => {
 
       {/* class info */}
       <label className="block mb-2 text-xl font-medium mt-16 text-gray-900 dark:text-white">
-        Permanent Address
+        Student Summary
       </label>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
@@ -193,14 +208,14 @@ const Form = () => {
             name="readClass"
             className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full "
           >
-            <option disabled selected>
+            <option value="" disabled>
               Select Class
             </option>
-            <option value="10th">10th</option>
             <option value="6th">6th</option>
-            <option value="8th">7th</option>
-            <option value="9th">8th</option>
-            <option value="5th">9th</option>
+            <option value="7th">7th</option>
+            <option value="8th">8th</option>
+            <option value="9th">9th</option>
+            <option value="10th">10th</option>
           </select>
         </div>
         {/* select  2 */}
@@ -209,7 +224,7 @@ const Form = () => {
             name="gender"
             className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5  w-full "
           >
-            <option disabled selected>
+            <option value="" disabled>
               Select Your Gender
             </option>
             <option value="male">Male</option>
@@ -222,7 +237,7 @@ const Form = () => {
             name="student"
             className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block  p-2.5  w-full "
           >
-            <option disabled selected>
+            <option value="" disabled>
               Are you student?
             </option>
             <option value="yes">Yes</option>
@@ -234,7 +249,7 @@ const Form = () => {
             name="schoolarship"
             className="border-b-2 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block p-2.5  w-full "
           >
-            <option disabled selected>
+            <option value="" disabled>
               Interested on Scholarship?
             </option>
             <option value="yes">yes</option>

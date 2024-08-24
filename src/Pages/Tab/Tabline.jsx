@@ -9,13 +9,13 @@ const Tabline = () => {
           <Link to={"/"} className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85]  hover:text-black  duration-300  border-r-2  ">
             Home
           </Link>
-          <Link to={"/programs"} className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] hover:text-black  duration-300  border-r-2">
+          <Link  className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] hover:text-black  duration-300  border-r-2">
             Programs
           </Link>
-          <Link to={"/service"} className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] hover:text-black  duration-300  border-r-2">
+          <Link  className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] hover:text-black  duration-300  border-r-2">
             Student Service
           </Link>
-          <Link to={"/contacts"} className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] hover:text-black  duration-300  border-r-2">
+          <Link  className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] hover:text-black  duration-300  border-r-2">
             Contacts Us
           </Link>
           <Link  className="md:px-4 px-2  transition-all hover:shadow-lg hover:shadow-amber-500/40 focus:opacity-[0.85] hover:text-black duration-300  ">

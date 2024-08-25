@@ -1,8 +1,8 @@
 import banner from "../../../public/assets/logo/7869021.jpg";
 const Banner = () => {
   return (
-    <div className="gird  grid-cols-1 flex   lg:grid-cols-2 ">
-      <div className="  w-1/3 ">
+    <div className="gird  grid-cols-1 flex lg:grid-cols-2 ">
+      <div className="  md:w-1/3 ">
         <img width={300} height={300} src={banner} alt="school logo" />
       </div>
 

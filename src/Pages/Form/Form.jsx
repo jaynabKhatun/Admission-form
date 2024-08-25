@@ -71,7 +71,8 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleAdmission} className=" p-20">
+    <form onSubmit={handleAdmission} className=" md:p-20 p-4">
+
       <div className="grid gap-6 mb-6 md:grid-cols-2 ">
         <div className="mt-10">
           <label className="block mb-2 text-xl font-medium mt-6 text-gray-900 dark:text-white">
@@ -87,11 +88,11 @@ const Form = () => {
           />
         </div>
 
-        <div className="mt-20">
+        <div className="md:mt-20">
           <input
             type="text"
             name="lastName"
-            className=" border-b-2 border-[#BAA994] mt-6 hover:border-[#F18B1C] duration-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
+            className=" border-b-2 border-[#BAA994] md:mt-6 hover:border-[#F18B1C] duration-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
             placeholder="your last name"
             required
           />
@@ -142,7 +143,7 @@ const Form = () => {
           <input
             type="text"
             name="city"
-            className=" border-b-2 mt-14 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
+            className=" border-b-2 md:mt-14 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
             placeholder="city"
             required
           />
@@ -180,7 +181,7 @@ const Form = () => {
           <input
             type="text"
             name="Last_Name"
-            className=" border-b-2 mt-14 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
+            className=" border-b-2 md:mt-14 hover:border-[#F18B1C] duration-300 border-[#BAA994] text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
             placeholder="Last Name"
             required
           />
@@ -259,7 +260,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className=" border-2 mt-16 border-[#BAA994] bg-gradient-to-r from-yellow-700 via-red-300 to-yellow-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2  block w-full p-2.5 "
+        className=" border-2 md:mt-24 mt-10 text-white bg-[rgb(208,109,2)] hover:text-black btn font-semibold px-5 py-2.5 text-center me-2 mb-2  block w-full p-2.5 "
       >
         Submit The College Admission Form
       </button>

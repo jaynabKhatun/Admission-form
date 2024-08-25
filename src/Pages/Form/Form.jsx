@@ -45,7 +45,7 @@ const Form = () => {
     console.log("candidates", candidates);
 
     //post data to the server using fetch API
-    fetch("http://localhost:3000/candidates", {
+    fetch("https://admission-server-side.vercel.app/candidates", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +66,6 @@ const Form = () => {
 
           // clear the form after successful submission
           form.reset();
-         
         }
       });
   };

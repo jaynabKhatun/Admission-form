@@ -5,6 +5,9 @@ import Marque from "../Pages/Marque/Marque";
 import Tabline from "../Pages/Tab/Tabline";
 import Apply from "../Pages/Apply/Apply";
 import Form from "../Pages/Form/Form";
+import Box from "../Pages/Box/Box";
+import Example from "../Pages/Example/Example";
+import Box2 from "../Pages/Box2/Box2";
 
 const Main = () => {
   return (
@@ -15,8 +18,10 @@ const Main = () => {
       <Tabline />
       <Apply></Apply>
       <Form></Form>
-    
       <Footer />
+      <Box />
+      <Example />
+      <Box2 />
     </div>
   );
 };

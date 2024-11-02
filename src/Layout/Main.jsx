@@ -8,6 +8,7 @@ import Form from "../Pages/Form/Form";
 import Box from "../Pages/Box/Box";
 import Example from "../Pages/Example/Example";
 import Box2 from "../Pages/Box2/Box2";
+import Box3 from "../Pages/Box3/Box3";
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
       <Box />
       <Example />
       <Box2 />
+      <Box3/>
     </div>
   );
 };
